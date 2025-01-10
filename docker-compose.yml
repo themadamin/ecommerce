@@ -3,6 +3,7 @@ services:
         build:
             context: ./docker/app
             dockerfile: Dockerfile
+        user: "${UID}:${GID}"
         volumes:
             - ./:/var/www/html
             - ./docker/app/php.ini:/usr/local/etc/php/php.ini
@@ -43,7 +44,8 @@ services:
             - app-network
 
     npm:
-        image: node:latest
+        build:
+            context: ./docker/npm
         volumes:
             - ./:/var/www/html
         working_dir: /var/www/html
