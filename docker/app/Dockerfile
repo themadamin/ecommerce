@@ -17,9 +17,7 @@ RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-RUN useradd -m -u 1000 appuser && \
-    mkdir -p /var/www/html && \
-    chown -R appuser:appuser /var/www/html
+RUN groupadd -g $GID appgroup && useradd -u $UID -g appgroup appuser
 
 USER appuser
 

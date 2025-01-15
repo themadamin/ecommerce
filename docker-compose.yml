@@ -46,6 +46,7 @@ services:
     npm:
         build:
             context: ./docker/npm
+        user: "${UID}:${GID}"
         volumes:
             - ./:/var/www/html
         working_dir: /var/www/html
