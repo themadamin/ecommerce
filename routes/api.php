@@ -5,7 +5,7 @@ use App\Http\Controllers\Api\Auth\LogoutController;
 use App\Http\Controllers\Api\Auth\RegistrationController;
 use Illuminate\Support\Facades\Route;
 
-Route::name('api.')->group(function () {
+/*Route::name('api.')->group(function () {
     //authenticated requests
     Route::middleware('auth:sanctum')->group(function (){
         Route::get('auth/logout', LogoutController::class)->name('logout');
@@ -17,4 +17,4 @@ Route::name('api.')->group(function () {
             Route::post('auth/login', LoginController::class)->name('login');
     });
 
-});
+});*/

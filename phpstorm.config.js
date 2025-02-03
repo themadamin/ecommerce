@@ -1,11 +1,8 @@
 System.config({
     "paths": {
-        "@*": 'resources/js/*',
-        '&*': 'resources/css/*',
-        'Assets*': 'resources/js/assets/*',
-        'Components*': 'resources/js/components/*',
-        'Router*': 'resources/js/router/*',
-        'Store*': 'resources/js/store/*',
-        'Views*': 'resources/js/views/*',
+        "@/*": './resources/js/*',
+        '&/*': './resources/css/*',
+        'Pages/*': './resources/js/Pages/*',
+        'Shared/*': './resources/js/Shared/*'
     }
 });
